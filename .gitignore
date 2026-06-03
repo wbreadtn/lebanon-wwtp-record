@@ -1,0 +1,21 @@
+﻿# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Office lock files
+~$*.docx
+~$*.doc
+~$*.xlsx
+
+# Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Superseded revisions (kept locally, not published)
+Public_Record_Statement_Rev_B.pdf
+Public_Record_Statement_Rev_B.docx
