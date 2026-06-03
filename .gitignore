@@ -19,3 +19,11 @@ desktop.ini
 # Superseded revisions (kept locally, not published)
 Public_Record_Statement_Rev_B.pdf
 Public_Record_Statement_Rev_B.docx
+
+# Local backups and working copies
+*.bak
+**(orig)**
+*.orig
+
+# Claude Code internal directory
+.claude/
