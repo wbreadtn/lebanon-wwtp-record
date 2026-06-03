@@ -40,6 +40,11 @@ Each appendix in the Rev C filing addresses a specific risk category or procedur
 - **[Exhibit C-1: Well Ring Map (three-ring version)](Mann_Rd_three_rings.png)** — 0.5-mile, 1.0-mile, and 2.0-mile contamination radii plotted on the TDEC Water Wells Desktop Application map, centered on 3230 Mann Road.
 - **[Mann Road 2-mile radius (single ring version)](Mann_Rd_2mile_radius.png)** — Companion image showing the 2-mile radius alone.
 
+### Earlier revisions
+
+- **[Public Record Statement, Revision A](public%20record%20Statement%20Final%20-%20Rev%20A.docx)** *(DOCX, May 27, 2026 — Filed)*
+  The original filed statement, focused on the Mann Road and Berea Church Road addresses. Superseded by Rev C for formal purposes but preserved here as the version on file with the City of Lebanon. Note: Appendix A of this document lists the names of endorsing residents; that appendix is part of the city's formal record and is not published on this site.
+
 ## How to use this material
 
 - **For citation in public comment or correspondence**, link to the consolidated PDF and reference the appendix letter and section.
