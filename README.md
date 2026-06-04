@@ -43,7 +43,7 @@ Each appendix in the Rev C filing addresses a specific risk category or procedur
 ### Earlier revisions
 
 - **[Public Record Statement, Revision A](public%20record%20Statement%20Final%20-%20Rev%20A.docx)** *(DOCX, May 27, 2026 — Filed)*
-  The original filed statement, focused on the Mann Road and Berea Church Road addresses. Superseded by Rev C for formal purposes but preserved here as the version on file with the City of Lebanon. Note: Appendix A of this document lists the names of endorsing residents; that appendix is part of the city's formal record and is not published on this site.
+  The original filed statement, focused on the Mann Road and Berea Church Road addresses. Superseded by Rev C for formal purposes but preserved here as the version on file with the City of Lebanon. This document is currently endorsed by approximately 200 residents in the area of Mann Road and Berea Church Road. Note: Appendix A of this document lists the names of endorsing residents; that appendix is part of the city's formal record and is not published on this site.
 
 ## How to use this material
 
