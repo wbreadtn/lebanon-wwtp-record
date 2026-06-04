@@ -67,3 +67,6 @@ The submitting petitioners are Todd Roark, Tich Chaikumnerd, and the concerned r
 These materials are prepared in good faith and reflect the petitioners' best understanding of the public record and supporting technical literature at the time of publication. Where the materials make inferences about the city's plans (for example, regarding the future use of the existing F1/F2 force mains), those inferences are documented within the relevant appendix along with the basis for the inference. Where the petitioners have identified information gaps in the public record, formal disclosure requests are included.
 
 Corrections or additional information from anyone with first-hand knowledge of the proceedings are welcome.
+
+<script data-goatcounter="https://lebanon-wwtp.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
