@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Lebanon WWTP Site Selection Public Record</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #222;
+      max-width: 640px;
+      margin: 48px auto;
+      padding: 0 24px 64px;
+    }
+    h1 { font-size: 1.4em; margin-bottom: 0.25em; }
+    p.subtitle { color: #555; margin-top: 0; }
+    a { color: #0969da; }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 4px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    textarea { height: 140px; resize: vertical; }
+    button[type="submit"] {
+      margin-top: 24px;
+      padding: 10px 24px;
+      font-size: 14px;
+      background: #0969da;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover { background: #0550ae; }
+    .note {
+      margin-top: 32px;
+      font-size: 0.88em;
+      color: #555;
+      border-top: 1px solid #ddd;
+      padding-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contact the Petitioners</h1>
+  <p class="subtitle">
+    Lebanon WWTP Site Selection — Public Record Archive &nbsp;|&nbsp;
+    <a href="index.html">Return to main page</a>
+  </p>
+
+  <p>Use this form to reach Todd Roark and Tich Chaikumnerd regarding the Lebanon
+  wastewater treatment plant site selection public record. Your email address is
+  required so we can reply; it will not be published or shared.</p>
+
+  <form action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="f8f95f44-c7a5-4e76-93eb-e485e00be099">
+    <input type="hidden" name="subject" value="Lebanon WWTP Record — message from site visitor">
+    <input type="hidden" name="from_name" value="Lebanon WWTP Record Site">
+    <input type="hidden" name="redirect" value="https://wbreadtn.github.io/lebanon-wwtp-record/contact.html?sent=1">
+
+    <!-- Honeypot — leave blank -->
+    <input type="checkbox" name="botcheck" style="display:none;">
+
+    <label for="name">Your name <span style="font-weight:normal;color:#555">(required)</span></label>
+    <input type="text" id="name" name="name" required autocomplete="name">
+
+    <label for="email">Your email address <span style="font-weight:normal;color:#555">(required — for our reply)</span></label>
+    <input type="email" id="email" name="email" required autocomplete="email">
+
+    <label for="message">Message <span style="font-weight:normal;color:#555">(required)</span></label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Send message</button>
+
+  </form>
+
+  <div class="note">
+    <strong>Privacy:</strong> This form is processed by
+    <a href="https://web3forms.com" target="_blank" rel="noopener">Web3Forms</a>.
+    Your message is delivered directly to the petitioners' email inbox.
+    Web3Forms does not retain a copy of your submission.
+  </div>
+
+  <script>
+    // Show a confirmation message if redirected back after submission
+    if (window.location.search.includes('sent=1')) {
+      var form = document.querySelector('form');
+      form.innerHTML = '<p style="padding:16px;background:#e6f4ea;border:1px solid #a8d5b5;border-radius:4px;">'
+        + '<strong>Message sent.</strong> We will reply to the email address you provided.</p>';
+    }
+  </script>
+
+</body>
+</html>

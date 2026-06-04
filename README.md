@@ -54,7 +54,7 @@ Each appendix in the Rev C filing addresses a specific risk category or procedur
 
 ## How to contact the petitioners
 
-The submitting petitioners are Todd Roark, Tich Chaikumnerd, and the concerned residents and property owners listed as endorsers in Appendix A of the May 27, 2026 Public Record Statement (Revision A). To be added as an endorser, to share additional information, or to coordinate on upcoming meetings, contact information is available through the City of Lebanon clerk's office in connection with the filing.
+The submitting petitioners are Todd Roark, Tich Chaikumnerd, and the concerned residents and property owners listed as endorsers in Appendix A of the May 27, 2026 Public Record Statement (Revision A). To be added as an endorser, to share additional information, or to coordinate on upcoming meetings, use the [contact form](contact.html) on this site or contact the petitioners through the City of Lebanon clerk's office in connection with the filing.
 
 ## Revision history
 
