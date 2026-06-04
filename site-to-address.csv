@@ -1,6 +1,6 @@
 site_number,address,acreage,property_id,general_location,notes
 1,3230 Mann Road,234,Map 25 Parcel 41,Mann Road,acreage listed as 235 in property ID source
-2,3965 Mann Road,66,Map 25 Parcel 33,Berea Church/Mann Road,"TRW annotation; ""by new moon / fair ground"" struck through in original"
+2,3965 Mann Road,66,Map 25 Parcel 33,Berea Church/Mann Road,
 3,800 Berea Church Road,70,Map 35 Parcel 12.13,Berea Church,
 4,755 Coles Ferry Pike,49,Map 35 Parcel 9.03,Coles Ferry/Berea Church,
 5,5335 Coles Ferry Pike,187,Map 35 Parcel 19.04,Coles/Berea/Manners,
@@ -12,5 +12,5 @@ site_number,address,acreage,property_id,general_location,notes
 11,3265 Coles Ferry Pike,56,Map 45 Parcel 18,Coles Ferry Pike,
 12,511 Walker Lane,356,Map 45 Parcel 36,Hartmann & Coles Ferry,close to Wilson County landfill
 13,510 Hartman Drive,59,Map 58 Parcel 28,Hartmann Drive,Rockwood
-14,1310 Quarles Drive,24,Map 58G Group A Parcel 2,Hartmann Drive,by perma pipe; across street from current plant on industrial site
-15,1103 Baddour Drive,47,Map 58M Group B Parcel 33,W Baddour @ Hartmann,by perma pipe; across street from current plant on industrial site
+14,1310 Quarles Drive,24,Map 58G Group A Parcel 2,Hartmann Drive,"by perma pipe; across street from current plant on industrial site"
+15,1103 Baddour Drive,47,Map 58M Group B Parcel 33,"W Baddour @ Hartmann",TRW
