@@ -10,7 +10,7 @@ A citizen-maintained archive of public-record statements, supplemental analysis,
 
 ## What this is
 
-The City of Lebanon is preparing to build a new wastewater treatment plant to replace or supplement the existing facility at 321 Hartmann Drive. A Site Selection Committee is currently evaluating nineteen candidate sites in and around Lebanon. Seven of those sites — Sites 1 through 7 — fall within the same rural residential corridor along Coles Ferry Pike, Mann Road, and Berea Church Road in north Lebanon.
+The City of Lebanon is preparing to build a new wastewater treatment plant to replace or supplement the existing facility at 321 Hartmann Drive. A Site Selection Committee is currently evaluating nineteen candidate sites in and around Lebanon ([site list](sites.html)). Seven of those sites — Sites 1 through 7 — fall within the same rural residential corridor along Coles Ferry Pike, Mann Road, and Berea Church Road in north Lebanon.
 
 This site collects formal public-record submissions opposing the selection of any site within that corridor, along with the supplemental analysis supporting those submissions. It is maintained by residents and property owners whose homes, wells, and farms are within the affected radius.
 
