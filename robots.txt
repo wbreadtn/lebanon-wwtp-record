@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wbreadtn.github.io/lebanon-wwtp-record/sitemap.xml
