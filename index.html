@@ -180,6 +180,22 @@
     or additional information from anyone with first-hand knowledge of the proceedings are welcome.
   </div>
 
+  <script>
+    window.addEventListener('load', function() {
+      document.querySelectorAll('a[href$=".pdf"], a[href$=".docx"]').forEach(function(a) {
+        a.addEventListener('click', function() {
+          if (window.goatcounter && window.goatcounter.count) {
+            window.goatcounter.count({
+              path: 'download/' + decodeURIComponent(a.getAttribute('href').split('/').pop()),
+              title: a.textContent.trim(),
+              event: true
+            });
+          }
+        });
+      });
+    });
+  </script>
+
   <script data-goatcounter="https://lebanon-wwtp.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 
