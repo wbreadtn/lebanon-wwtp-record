@@ -63,13 +63,38 @@
     <strong>Current revision:</strong> Rev C (June 15, 2026)
   </div>
 
-  <div style="font-size:0.88em;color:#555;margin-bottom:1.6em;">
+  <div id="update-block"
+       data-date="2026-06-08"
+       data-summary="Added upcoming meetings page. Linked from main page nav."
+       style="font-size:0.88em;color:#555;margin-bottom:1.6em;">
     <strong>Today&#8217;s updates:</strong>
     <ul style="margin:4px 0 6px 0;padding-left:1.4em;">
       <li><span style="color:#888">1 pm &mdash;</span> Added <a href="meetings.html">upcoming meetings page</a>. Linked from main page nav.</li>
     </ul>
     <a href="changes.html">Full change history &rarr;</a>
   </div>
+
+  <script>
+    (function() {
+      var block = document.getElementById('update-block');
+      var blockDate = block.dataset.date;
+      // Get today's date in Central Time (CDT = UTC-5, CST = UTC-6)
+      var now = new Date();
+      var central = new Date(now.toLocaleString('en-US', { timeZone: 'America/Chicago' }));
+      var today = central.getFullYear() + '-' +
+        String(central.getMonth() + 1).padStart(2, '0') + '-' +
+        String(central.getDate()).padStart(2, '0');
+
+      if (blockDate !== today) {
+        var d = new Date(blockDate + 'T12:00:00');
+        var label = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        block.innerHTML =
+          '<strong>Last updated:</strong> ' + label + ' &mdash; ' +
+          block.dataset.summary +
+          '<br><a href="changes.html">Full change history →</a>';
+      }
+    })();
+  </script>
 
   <h2>What this is</h2>
 
