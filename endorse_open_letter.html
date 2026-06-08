@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endorse the Open Letter — Lebanon WWTP Site Selection Public Record</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #222;
+      max-width: 640px;
+      margin: 48px auto;
+      padding: 0 24px 64px;
+    }
+    h1 { font-size: 1.4em; margin-bottom: 0.25em; }
+    p.subtitle { color: #555; margin-top: 0; }
+    a { color: #0969da; }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 4px;
+    }
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .checkbox-row input[type="checkbox"] {
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    .checkbox-row label {
+      font-weight: normal;
+      margin: 0;
+    }
+    button[type="submit"] {
+      margin-top: 28px;
+      padding: 10px 24px;
+      font-size: 14px;
+      background: #0969da;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover { background: #0550ae; }
+    .note {
+      margin-top: 32px;
+      font-size: 0.88em;
+      color: #555;
+      border-top: 1px solid #ddd;
+      padding-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Endorse the Open Letter</h1>
+  <p class="subtitle">
+    Lebanon WWTP Site Selection — Public Record Archive &nbsp;|&nbsp;
+    <a href="index.html">Return to main page</a>
+  </p>
+
+  <p>Use this form to add your name as an endorser of the
+  <a href="Open_Letter_to_Committee.pdf">Open Letter to the Site Selection Committee</a>.
+  Endorsers' names may be included in the formal filing with the City of Lebanon.
+  Your email address, if provided, will not be published or shared.</p>
+
+  <form action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="f8f95f44-c7a5-4e76-93eb-e485e00be099">
+    <input type="hidden" name="subject" value="Lebanon WWTP Open Letter — Endorsement">
+    <input type="hidden" name="from_name" value="Lebanon WWTP Endorsement Form">
+    <input type="hidden" name="redirect" value="https://wbreadtn.github.io/lebanon-wwtp-record/endorse_open_letter.html?sent=1">
+
+    <!-- Honeypot — leave blank -->
+    <input type="checkbox" name="botcheck" style="display:none;">
+
+    <label for="name">Full name <span style="font-weight:normal;color:#555">(required)</span></label>
+    <input type="text" id="name" name="name" required autocomplete="name">
+
+    <label for="location">City or neighborhood <span style="font-weight:normal;color:#555">(required)</span></label>
+    <input type="text" id="location" name="location" required placeholder="e.g. Lebanon, Mann Road area">
+
+    <label for="email">Email address <span style="font-weight:normal;color:#555">(optional — for follow-up only)</span></label>
+    <input type="email" id="email" name="email" autocomplete="email">
+
+    <div class="checkbox-row">
+      <input type="checkbox" id="endorse" name="endorsement" value="I endorse the Open Letter to the Site Selection Committee" required>
+      <label for="endorse">I endorse the Open Letter to the City of Lebanon Wastewater Treatment Plant Site Selection Committee, as filed by Todd Roark, Tich Chaikumnerd, and the concerned residents of the affected corridor. <span style="color:#555">(required)</span></label>
+    </div>
+
+    <button type="submit">Submit endorsement</button>
+
+  </form>
+
+  <div class="note">
+    <strong>Privacy:</strong> Endorser names may be included in the formal public record filing with the City of Lebanon.
+    Email addresses will not be published or shared. This form is processed by
+    <a href="https://web3forms.com" target="_blank" rel="noopener">Web3Forms</a>;
+    your submission is delivered directly to the petitioners' email inbox.
+  </div>
+
+  <script>
+    if (window.location.search.includes('sent=1')) {
+      var form = document.querySelector('form');
+      form.innerHTML = '<p style="padding:16px;background:#e6f4ea;border:1px solid #a8d5b5;border-radius:4px;">'
+        + '<strong>Thank you.</strong> Your endorsement has been received.</p>';
+    }
+  </script>
+
+  <script data-goatcounter="https://lebanon-wwtp.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
