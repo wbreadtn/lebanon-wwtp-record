@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Upcoming Meetings — Lebanon WWTP Site Selection Public Record</title>
+  <title>Meetings — Lebanon WWTP Site Selection Public Record</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,18 +15,34 @@
       padding: 0 24px 64px;
     }
     h1 { font-size: 1.4em; margin-bottom: 0.25em; }
+    h2.section {
+      font-size: 1em;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #555;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 4px;
+      margin: 2em 0 0.8em;
+    }
     p.subtitle { color: #555; margin-top: 0; }
     a { color: #0969da; }
     .meeting {
       border: 1px solid #ddd;
       border-radius: 6px;
       padding: 20px 24px;
-      margin-top: 24px;
+      margin-top: 16px;
     }
-    .meeting h2 {
+    .meeting.past {
+      border-color: #e0e0e0;
+      background: #fafafa;
+    }
+    .meeting h3 {
       font-size: 1.05em;
       margin: 0 0 12px 0;
       color: #111;
+    }
+    .meeting.past h3 {
+      color: #444;
     }
     .meeting table {
       border-collapse: collapse;
@@ -43,18 +59,62 @@
       font-weight: bold;
       white-space: nowrap;
     }
+    .pending {
+      color: #888;
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Upcoming Meetings</h1>
+  <h1>Meetings</h1>
   <p class="subtitle">
     Lebanon WWTP Site Selection — Public Record Archive &nbsp;|&nbsp;
     <a href="index.html">Return to main page</a>
   </p>
 
+  <h2 class="section">Upcoming</h2>
+
   <div class="meeting">
-    <h2>Community Meeting with Local Representative Jerry McFarland</h2>
+    <h3>City of Lebanon WWTP Site Selection Committee — Regular Meeting</h3>
+    <table>
+      <tr>
+        <td>Date</td>
+        <td>Monday, June 15, 2026</td>
+      </tr>
+      <tr>
+        <td>Time</td>
+        <td>4:00 p.m.</td>
+      </tr>
+      <tr>
+        <td>Place</td>
+        <td>City of Lebanon Administration Building<br>200 N. Castle Heights Ave., Lebanon, TN</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="meeting">
+    <h3>City of Lebanon City Council — Regular Meeting (Public Comment)</h3>
+    <table>
+      <tr>
+        <td>Date</td>
+        <td>Tuesday, June 16, 2026</td>
+      </tr>
+      <tr>
+        <td>Time</td>
+        <td>6:00 p.m. &nbsp;<span style="color:#555;font-size:0.9em;">(3-minute public comment per speaker)</span></td>
+      </tr>
+      <tr>
+        <td>Place</td>
+        <td>City of Lebanon Administration Building<br>200 N. Castle Heights Ave., Lebanon, TN</td>
+      </tr>
+    </table>
+  </div>
+
+  <h2 class="section">Past Meetings</h2>
+
+  <div class="meeting past">
+    <h3>Community Meeting — Berea Church of Christ</h3>
     <table>
       <tr>
         <td>Date</td>
@@ -68,23 +128,13 @@
         <td>Place</td>
         <td>Berea Church of Christ<br>50 Berea Church Rd, Lebanon, TN 37087</td>
       </tr>
-    </table>
-  </div>
-
-  <div class="meeting">
-    <h2>City of Lebanon Wastewater Treatment Plant Site Selection Committee Regular Meeting</h2>
-    <table>
       <tr>
-        <td>Date</td>
-        <td>Monday, June 15, 2026</td>
+        <td>Host</td>
+        <td>Jerry McFarland</td>
       </tr>
       <tr>
-        <td>Time</td>
-        <td>4:00 p.m.</td>
-      </tr>
-      <tr>
-        <td>Place</td>
-        <td>City of Lebanon Administration Building<br>200 N. Castle Heights Ave., Lebanon, TN</td>
+        <td>Notes</td>
+        <td><span class="pending">Pending review — to be posted</span></td>
       </tr>
     </table>
   </div>
