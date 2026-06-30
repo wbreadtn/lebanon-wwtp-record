@@ -71,8 +71,8 @@
   <table>
     <thead>
       <tr>
-        <th>Site</th>
-        <th style="text-align:center">Rank</th>
+        <th><a href="#" onclick="sortByCol(0,'asc','site');return false;" style="color:inherit;text-decoration:none;cursor:pointer;" title="Sort by site number">Site</a></th>
+        <th style="text-align:center"><a href="#" onclick="sortByCol(1,'desc','rank');return false;" style="color:inherit;text-decoration:none;cursor:pointer;" title="Sort by score">Rank</a>&thinsp;<sup><a href="#rank-note" style="color:#0969da;font-weight:normal;">*</a></sup></th>
         <th>Address</th>
         <th style="text-align:right">Acres</th>
         <th>Property ID</th>
@@ -250,11 +250,38 @@
     petitioners request the committee prioritize. All other sites are outside the
     city limits and are the subject of the public record statements on this site.
     Sites 13A and 16–19 were added at the June 2, 2026 committee meeting.
-    <strong>Rank</strong> column reflects committee average scores presented at the
-    June 29, 2026 meeting (<a href="Selection_Committee_Site_Rankings_20260629_160500_Cropped.jpg">source image</a>).
-    Sites 13A and 18 did not appear in the ranking; Sites 20 and 21 appeared in the
-    ranking but are not yet in this table.
+    <span id="rank-note"><sup>*</sup> <strong>Rank</strong> scores are the committee member averages
+    announced by the City of Lebanon Site Selection Committee at the June 29, 2026 meeting
+    (<a href="Selection_Committee_Site_Rankings_20260629_160500_Cropped.jpg">source image</a>).
+    Higher scores reflect stronger committee preference. Sites 13A and 18 did not appear
+    in the announced ranking; Sites 20 and 21 appeared in the ranking but are not yet in
+    this table.</span>
   </div>
+
+  <script>
+    function sortByCol(colIndex, direction, type) {
+      var tbody = document.querySelector('table tbody');
+      var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+      rows.sort(function(a, b) {
+        var av = a.cells[colIndex].textContent.trim();
+        var bv = b.cells[colIndex].textContent.trim();
+        if (type === 'site') {
+          var pa = av.match(/^(\d+)([A-Za-z]?)$/) || [0, '999', ''];
+          var pb = bv.match(/^(\d+)([A-Za-z]?)$/) || [0, '999', ''];
+          var na = parseInt(pa[1]), nb = parseInt(pb[1]);
+          if (na !== nb) return na - nb;
+          return (pa[2] || '').localeCompare(pb[2] || '');
+        } else {
+          var na = parseFloat(av);
+          var nb = parseFloat(bv);
+          if (isNaN(na)) return 1;
+          if (isNaN(nb)) return -1;
+          return direction === 'desc' ? nb - na : na - nb;
+        }
+      });
+      for (var i = 0; i < rows.length; i++) tbody.appendChild(rows[i]);
+    }
+  </script>
 
   <script data-goatcounter="https://lebanon-wwtp.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
