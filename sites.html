@@ -37,6 +37,7 @@
     tr:last-child td { border-bottom: none; }
     td.site { text-align: center; font-weight: bold; width: 60px; }
     td.score { text-align: center; width: 60px; font-weight: bold; color: #335; }
+    td.city { text-align: center; width: 60px; }
     td.acreage { text-align: right; width: 80px; }
     td.propid { font-size: 0.88em; color: #444; white-space: nowrap; }
     .shortlisted td { background: #f8c4c4; }
@@ -81,6 +82,7 @@
       <tr>
         <th><a href="#" onclick="sortByCol(0,'asc','site');return false;" style="color:inherit;text-decoration:underline;cursor:pointer;" title="Sort by site number">Site</a></th>
         <th style="text-align:center"><a href="#" onclick="sortByCol(1,'desc','rank');return false;" style="color:inherit;text-decoration:underline;cursor:pointer;" title="Sort by score">Rank</a>&thinsp;<sup style="line-height:0;"><a href="#rank-note" style="color:#0969da;font-weight:normal;text-decoration:none;">*</a></sup></th>
+        <th style="text-align:center">Inside City Limits</th>
         <th>Address</th>
         <th style="text-align:right">Acres</th>
         <th>Property ID</th>
@@ -91,6 +93,7 @@
       <tr class="shortlisted">
         <td class="site">1</td>
         <td class="score">36.1</td>
+        <td class="city"></td>
         <td>3230 Mann Road</td>
         <td class="acreage">234</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095025%20%20%20%2004100" target="_blank">Map 25 Parcel 41</a></td>
@@ -99,6 +102,7 @@
       <tr class="shortlisted">
         <td class="site">2</td>
         <td class="score">38.1</td>
+        <td class="city"></td>
         <td>3965 Mann Road</td>
         <td class="acreage">66</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095025%20%20%20%2003300" target="_blank">Map 25 Parcel 33</a></td>
@@ -107,6 +111,7 @@
       <tr class="shortlisted">
         <td class="site">3</td>
         <td class="score">35.1</td>
+        <td class="city"></td>
         <td>800 Berea Church Road</td>
         <td class="acreage">70</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095035%20%20%20%2001213" target="_blank">Map 35 Parcel 12.13</a></td>
@@ -115,6 +120,7 @@
       <tr>
         <td class="site">4</td>
         <td class="score">31.8</td>
+        <td class="city"></td>
         <td>755 Coles Ferry Pike</td>
         <td class="acreage">49</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095035%20%20%20%2000903" target="_blank">Map 35 Parcel 9.03</a></td>
@@ -123,6 +129,7 @@
       <tr class="shortlisted">
         <td class="site">5</td>
         <td class="score">37.7</td>
+        <td class="city"></td>
         <td>5335 Coles Ferry Pike</td>
         <td class="acreage">187</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095035%20%20%20%2001904" target="_blank">Map 35 Parcel 19.04</a></td>
@@ -131,6 +138,7 @@
       <tr>
         <td class="site">6</td>
         <td class="score">32.7</td>
+        <td class="city"></td>
         <td>6390 Coles Ferry Pike</td>
         <td class="acreage">223</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095035%20%20%20%2000800" target="_blank">Map 35 Parcel 8</a></td>
@@ -139,6 +147,7 @@
       <tr class="shortlisted">
         <td class="site">7</td>
         <td class="score">37.7</td>
+        <td class="city"></td>
         <td>208 Oriole Drive</td>
         <td class="acreage">97</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095035%20%20%20%2002700" target="_blank">Map 35 Parcel 27</a></td>
@@ -147,6 +156,7 @@
       <tr class="shortlisted">
         <td class="site">8</td>
         <td class="score">36.1</td>
+        <td class="city"></td>
         <td>914 Maple Hill Road</td>
         <td class="acreage">164</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095046%20%20%20%2002102" target="_blank">Map 46 Parcel 21.02</a></td>
@@ -155,6 +165,7 @@
       <tr>
         <td class="site">9</td>
         <td class="score">23.2</td>
+        <td class="city"></td>
         <td>3370 Coles Ferry Pike</td>
         <td class="acreage">105</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095045%20%20%20%2001200" target="_blank">Map 45 Parcel 12</a></td>
@@ -163,6 +174,7 @@
       <tr class="shortlisted">
         <td class="site">10</td>
         <td class="score">34.0</td>
+        <td class="city"></td>
         <td>3345 Coles Ferry Pike</td>
         <td class="acreage">93</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095045%20%20%20%2001700" target="_blank">Map 45 Parcel 17</a></td>
@@ -171,6 +183,7 @@
       <tr>
         <td class="site">11</td>
         <td class="score">28.8</td>
+        <td class="city"></td>
         <td>3265 Coles Ferry Pike</td>
         <td class="acreage">56</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095045%20%20%20%2001800" target="_blank">Map 45 Parcel 18</a></td>
@@ -179,6 +192,7 @@
       <tr class="shortlisted">
         <td class="site">12</td>
         <td class="score">34.1</td>
+        <td class="city"></td>
         <td>511 Walker Lane</td>
         <td class="acreage">356</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095045%20%20%20%2003600" target="_blank">Map 45 Parcel 36</a></td>
@@ -187,6 +201,7 @@
       <tr class="inside shortlisted">
         <td class="site">13</td>
         <td class="score">52.1</td>
+        <td class="city">Yes</td>
         <td>510 Hartman Drive</td>
         <td class="acreage">59</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095058%20%20%20%2002800" target="_blank">Map 58 Parcel 28</a></td>
@@ -195,6 +210,7 @@
       <tr class="inside">
         <td class="site">13A</td>
         <td class="score" style="color:#aaa">&mdash;</td>
+        <td class="city">Yes</td>
         <td>Hartman Drive</td>
         <td class="acreage">~130</td>
         <td class="propid"><a href="merged_parcels_13A.png" target="_blank">Maps 58-028.00, 58-015.39,<br>45-057.00, 45-058.00 (Partial)</a></td>
@@ -203,6 +219,7 @@
       <tr class="inside shortlisted">
         <td class="site">14</td>
         <td class="score">39.9</td>
+        <td class="city">Yes</td>
         <td>1310 Quarles Drive</td>
         <td class="acreage">24</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095058G%20A%2000200" target="_blank">Map 58G Group A Parcel 2</a></td>
@@ -211,6 +228,7 @@
       <tr>
         <td class="site">15</td>
         <td class="score">32.2</td>
+        <td class="city">Yes</td>
         <td>1103 Baddour Drive</td>
         <td class="acreage">47</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095058M%20B%2003300" target="_blank">Map 58M Group B Parcel 33</a></td>
@@ -219,6 +237,7 @@
       <tr class="inside shortlisted">
         <td class="site">16</td>
         <td class="score">36.2</td>
+        <td class="city">Yes</td>
         <td>305&#8211;309 Hartmann Drive</td>
         <td class="acreage">73.06</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095058%20%20%20%2002403" target="_blank">Map 58 Parcel 24.03</a></td>
@@ -227,6 +246,7 @@
       <tr>
         <td class="site">17</td>
         <td class="score">30.0</td>
+        <td class="city">Yes</td>
         <td>200 Carver Lane</td>
         <td class="acreage">38.56</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095057%20%20%20%2006302" target="_blank">Map 57 Parcel 63.02</a></td>
@@ -235,6 +255,7 @@
       <tr>
         <td class="site">18</td>
         <td class="score" style="color:#aaa">&mdash;</td>
+        <td class="city"></td>
         <td>Trice Road</td>
         <td class="acreage">82</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095046%20%20%20%2000800" target="_blank">Map 46 Parcel 8.00</a><br><a href="https://tnmap.tn.gov/assessment/#/parcel/095046%20%20%20%2002102" target="_blank">Map 46 Parcel 21.02</a></td>
@@ -243,6 +264,7 @@
       <tr>
         <td class="site">19</td>
         <td class="score">23.9</td>
+        <td class="city"></td>
         <td>Coles Ferry Pike</td>
         <td class="acreage">43</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095035%20%20%20%2000900" target="_blank">Map 35 Parcel 9.00</a></td>
@@ -251,6 +273,7 @@
       <tr class="inside">
         <td class="site">22</td>
         <td class="score" style="color:#aaa">&mdash;</td>
+        <td class="city">Yes</td>
         <td>409 Carver Lane</td>
         <td class="acreage">150</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095045%20%20%20%2005700" target="_blank">Map 45 Parcel 57.00</a></td>
