@@ -39,7 +39,7 @@
     td.score { text-align: center; width: 60px; font-weight: bold; color: #335; }
     td.acreage { text-align: right; width: 80px; }
     td.propid { font-size: 0.88em; color: #444; white-space: nowrap; }
-    .inside { background: #eaf5ea; }
+    .inside td { background: #eaf5ea; }
     .note { color: #555; font-size: 0.9em; }
     .source-note {
       margin-top: 28px;
@@ -71,8 +71,8 @@
   <table>
     <thead>
       <tr>
-        <th><a href="#" onclick="sortByCol(0,'asc','site');return false;" style="color:inherit;text-decoration:none;cursor:pointer;" title="Sort by site number">Site</a></th>
-        <th style="text-align:center"><a href="#" onclick="sortByCol(1,'desc','rank');return false;" style="color:inherit;text-decoration:none;cursor:pointer;" title="Sort by score">Rank</a>&thinsp;<sup><a href="#rank-note" style="color:#0969da;font-weight:normal;">*</a></sup></th>
+        <th><a href="#" onclick="sortByCol(0,'asc','site');return false;" style="color:inherit;text-decoration:underline;cursor:pointer;" title="Sort by site number">Site</a></th>
+        <th style="text-align:center"><a href="#" onclick="sortByCol(1,'desc','rank');return false;" style="color:inherit;text-decoration:underline;cursor:pointer;" title="Sort by score">Rank</a>&thinsp;<sup><a href="#rank-note" style="color:#0969da;font-weight:normal;text-decoration:none;">*</a></sup></th>
         <th>Address</th>
         <th style="text-align:right">Acres</th>
         <th>Property ID</th>
