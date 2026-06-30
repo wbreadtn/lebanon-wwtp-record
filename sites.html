@@ -75,7 +75,7 @@
     Site qualification coloring current as of Selection Committee results on June 29, 2026.
   </p>
   <p style="font-size:0.85em;color:#444;margin-top:4px;margin-bottom:4px;">
-    <span style="display:inline-block;width:13px;height:13px;background:#f8c4c4;border:1px solid #aaa;vertical-align:middle;margin-right:4px;"></span>Not eliminated &emsp;
+    <span style="display:inline-block;width:13px;height:13px;background:#f8c4c4;border:1px solid #aaa;vertical-align:middle;margin-right:4px;"></span>Not eliminated, county only &emsp;
     <span style="display:inline-block;width:13px;height:13px;background:#fce8e8;border:1px solid #aaa;vertical-align:middle;margin-right:4px;"></span>Not eliminated, within city limits &emsp;
     <span style="display:inline-block;width:13px;height:13px;background:#ccc;border:1px solid #aaa;vertical-align:middle;margin-right:4px;"></span>Eliminated
   </p>
@@ -85,7 +85,7 @@
       <tr>
         <th><a href="#" onclick="sortByCol(0,'asc','site');return false;" style="color:inherit;text-decoration:underline;cursor:pointer;" title="Sort by site number">Site</a></th>
         <th style="text-align:center"><a href="#" onclick="sortByCol(1,'desc','rank');return false;" style="color:inherit;text-decoration:underline;cursor:pointer;" title="Sort by score">Rank</a>&thinsp;<sup style="line-height:0;"><a href="#rank-note" style="color:#0969da;font-weight:normal;text-decoration:none;">*</a></sup></th>
-        <th style="text-align:center">Inside City Limits</th>
+        <th style="text-align:center"><a href="#" onclick="sortByCol(2,'asc','city');return false;" style="color:inherit;text-decoration:underline;cursor:pointer;" title="Sort by city limits">Inside City Limits</a></th>
         <th>Address</th>
         <th style="text-align:right">Acres</th>
         <th>Property ID</th>
@@ -210,6 +210,7 @@
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095058%20%20%20%2002800" target="_blank">Map 58 Parcel 28</a></td>
         <td class="note">Rockwood (existing industrial site); 99.8% in flood plain (45% floodway, 55% flood plain); adjacent to both force mains; good road frontage; 100-ft gas easement limits buildable area; no Phase 1/2 environmental assessment completed; unknown fill bearing capacity.</td>
       </tr>
+      <!-- Site 13A - commented out, not removed
       <tr class="inside">
         <td class="site">13A</td>
         <td class="score" style="color:#aaa">&mdash;</td>
@@ -219,6 +220,7 @@
         <td class="propid"><a href="merged_parcels_13A.png" target="_blank">Maps 58-028.00, 58-015.39,<br>45-057.00, 45-058.00 (Partial)</a></td>
         <td class="note">Adjacent to site 13; three parcels combined; 60-ft stream buffer between sites 13 and 13A</td>
       </tr>
+      -->
       <tr class="inside shortlisted">
         <td class="site">14</td>
         <td class="score">39.9</td>
@@ -313,6 +315,15 @@
           var na = parseInt(pa[1]), nb = parseInt(pb[1]);
           if (na !== nb) return na - nb;
           return (pa[2] || '').localeCompare(pb[2] || '');
+        } else if (type === 'city') {
+          var wa = av === 'Yes' ? 0 : 1;
+          var wb = bv === 'Yes' ? 0 : 1;
+          if (wa !== wb) return direction === 'desc' ? wb - wa : wa - wb;
+          var sa = a.cells[0].textContent.trim().match(/^(\d+)([A-Za-z]?)$/) || [0, '999', ''];
+          var sb = b.cells[0].textContent.trim().match(/^(\d+)([A-Za-z]?)$/) || [0, '999', ''];
+          var na = parseInt(sa[1]), nb = parseInt(sb[1]);
+          if (na !== nb) return na - nb;
+          return (sa[2] || '').localeCompare(sb[2] || '');
         } else {
           var na = parseFloat(av);
           var nb = parseFloat(bv);
