@@ -42,6 +42,7 @@
     td.site { text-align: center; font-weight: bold; width: 60px; }
     td.score { text-align: center; width: 60px; font-weight: bold; color: #335; }
     td.city { text-align: center; width: 60px; }
+    td.seller { text-align: center; width: 60px; }
     td.acreage { text-align: right; width: 80px; }
     td.propid { font-size: 0.88em; color: #444; white-space: nowrap; }
     .shortlisted td { background: #f8c4c4; }
@@ -83,7 +84,7 @@
   statement acknowledges nineteen sites. Site 22 (Maple Hill Road, parcel 046 021.01) was added at the June 29, 2026 committee meeting.</p>
 
   <p style="font-size:0.85em;color:#555;margin-top:16px;margin-bottom:2px;font-style:italic;">
-    Site qualification coloring current as of Selection Committee results on June 29, 2026.
+    Site qualification coloring current as of Selection Committee results on July 21, 2026.
   </p>
   <p style="font-size:0.85em;color:#444;margin-top:4px;margin-bottom:4px;">
     <span style="display:inline-block;width:13px;height:13px;background:#f8c4c4;border:1px solid #aaa;vertical-align:middle;margin-right:4px;"></span>Not eliminated, county only &emsp;
@@ -101,6 +102,7 @@
         <th><a href="#" onclick="sortByCol(0,'asc','site');return false;" style="color:inherit;text-decoration:underline;cursor:pointer;" title="Sort by site number">Site</a></th>
         <th style="text-align:center"><a href="#" onclick="sortByCol(1,'desc','rank');return false;" style="color:inherit;text-decoration:underline;cursor:pointer;" title="Sort by score">Rank</a>&thinsp;<sup style="line-height:0;"><a href="#rank-note" style="color:#0969da;font-weight:normal;text-decoration:none;">*</a></sup></th>
         <th style="text-align:center"><a href="#" onclick="sortByCol(2,'asc','city');return false;" style="color:inherit;text-decoration:underline;cursor:pointer;" title="Sort by city limits">Inside City Limits</a></th>
+        <th style="text-align:center"><a href="#" onclick="sortByCol(3,'asc','city');return false;" style="color:inherit;text-decoration:underline;cursor:pointer;" title="Sort by willing seller">Willing Seller</a>&thinsp;<sup style="line-height:0;"><a href="#seller-note" style="color:#0969da;font-weight:normal;text-decoration:none;">&dagger;</a></sup></th>
         <th>Address</th>
         <th style="text-align:right">Acres</th>
         <th>Property ID</th>
@@ -108,10 +110,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="shortlisted">
+      <tr>
         <td class="site">1</td>
         <td class="score">36.1</td>
         <td class="city"></td>
+        <td class="seller"></td>
         <td>3230 Mann Road</td>
         <td class="acreage">234</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095025%20%20%20%2004100" target="_blank">Map 25 Parcel 41</a></td>
@@ -121,15 +124,17 @@
         <td class="site">2</td>
         <td class="score">38.1</td>
         <td class="city"></td>
+        <td class="seller">Yes</td>
         <td>3965 Mann Road</td>
         <td class="acreage">66</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095025%20%20%20%2003300" target="_blank">Map 25 Parcel 33</a></td>
         <td class="note">Same utility constraints as site 1 (no gas/three-phase); ~100 ft from main line; 9.6% in flood plain (NW corner); at least one home and another structure on site; hill cut needed; ~$500K conveyance.</td>
       </tr>
-      <tr class="shortlisted">
+      <tr>
         <td class="site">3</td>
         <td class="score">35.1</td>
         <td class="city"></td>
+        <td class="seller"></td>
         <td>800 Berea Church Road</td>
         <td class="acreage">70</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095035%20%20%20%2001213" target="_blank">Map 35 Parcel 12.13</a></td>
@@ -139,15 +144,17 @@
         <td class="site">4</td>
         <td class="score">31.8</td>
         <td class="city"></td>
+        <td class="seller"></td>
         <td>755 Coles Ferry Pike</td>
         <td class="acreage">49</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095035%20%20%20%2000903" target="_blank">Map 35 Parcel 9.03</a></td>
         <td class="note">Adjacent to site 3; smaller with less vegetative buffer; &lt;100 ft from main line; 1.9% in flood plain; no existing structures on site; closer to Berea Church school; gas/three-phase from Coles Ferry Pike; combining with site 3 discussed; ~$500K conveyance.</td>
       </tr>
-      <tr class="shortlisted">
+      <tr>
         <td class="site">5</td>
         <td class="score">37.7</td>
         <td class="city"></td>
+        <td class="seller"></td>
         <td>5335 Coles Ferry Pike</td>
         <td class="acreage">187</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095035%20%20%20%2001904" target="_blank">Map 35 Parcel 19.04</a></td>
@@ -157,6 +164,7 @@
         <td class="site">6</td>
         <td class="score">32.7</td>
         <td class="city"></td>
+        <td class="seller"></td>
         <td>6390 Coles Ferry Pike</td>
         <td class="acreage">223</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095035%20%20%20%2000800" target="_blank">Map 35 Parcel 8</a></td>
@@ -166,15 +174,17 @@
         <td class="site">7</td>
         <td class="score">37.7</td>
         <td class="city"></td>
+        <td class="seller">Yes</td>
         <td>208 Oriole Drive</td>
         <td class="acreage">97</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095035%20%20%20%2002700" target="_blank">Map 35 Parcel 27</a></td>
         <td class="note">South of site 6; adequate room and buffer; house on property; flood plain %: May 27 transcript says 18.5%, June 2 transcript says none (discrepancy unresolved); ~$28M conveyance (longest pipe run of all sites, through site 6).</td>
       </tr>
-      <tr class="shortlisted">
+      <tr>
         <td class="site">8</td>
         <td class="score">36.1</td>
         <td class="city"></td>
+        <td class="seller"></td>
         <td>914 Maple Hill Road</td>
         <td class="acreage">164</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095046%20%20%20%2002102" target="_blank">Map 46 Parcel 21.02</a></td>
@@ -184,15 +194,17 @@
         <td class="site">9</td>
         <td class="score">23.2</td>
         <td class="city"></td>
+        <td class="seller"></td>
         <td>3370 Coles Ferry Pike</td>
         <td class="acreage">105</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095045%20%20%20%2001200" target="_blank">Map 45 Parcel 12</a></td>
         <td class="note">~71% in flood plain; site mostly floodway, assessed as not very usable; existing structures on site; fronts Coles Ferry Pike; line distance: May 27 says 2,800 ft, June 2 says ~7,100 ft (discrepancy — engineer flagged measurement ambiguity in May 27 meeting); three-phase electric/water/gas available; ~$8M conveyance.</td>
       </tr>
-      <tr class="shortlisted">
+      <tr>
         <td class="site">10</td>
         <td class="score">34.0</td>
         <td class="city"></td>
+        <td class="seller"></td>
         <td>3345 Coles Ferry Pike</td>
         <td class="acreage">93</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095045%20%20%20%2001700" target="_blank">Map 45 Parcel 17</a></td>
@@ -202,15 +214,17 @@
         <td class="site">11</td>
         <td class="score">28.8</td>
         <td class="city"></td>
+        <td class="seller"></td>
         <td>3265 Coles Ferry Pike</td>
         <td class="acreage">56</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095045%20%20%20%2001800" target="_blank">Map 45 Parcel 18</a></td>
         <td class="note">Adjacent to site 10; very limited vegetative buffer; water/gas/three-phase available; ~$18.5M conveyance.</td>
       </tr>
-      <tr class="shortlisted">
+      <tr>
         <td class="site">12</td>
         <td class="score">34.1</td>
         <td class="city"></td>
+        <td class="seller"></td>
         <td>511 Walker Lane</td>
         <td class="acreage">356</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095045%20%20%20%2003600" target="_blank">Map 45 Parcel 36</a></td>
@@ -220,15 +234,17 @@
         <td class="site">13</td>
         <td class="score">52.1</td>
         <td class="city">Yes</td>
+        <td class="seller">Yes</td>
         <td>510 Hartman Drive</td>
         <td class="acreage">59</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095058%20%20%20%2002800" target="_blank">Map 58 Parcel 28</a><br><a href="https://tnmap.tn.gov/assessment/#/parcel/095058%20%20%20%2001539" target="_blank">Map 58 Parcel 15.39</a><br><a href="https://tnmap.tn.gov/assessment/#/parcel/095045%20%20%20%2005700" target="_blank">Map 45 Parcel 57.00</a><br><a href="merged_parcels_13A.png" target="_blank">Map 45 Parcel 58.00 (Combined)</a></td>
         <td class="note">Rockwood (existing industrial site); 99.8% in flood plain (45% floodway, 55% flood plain); adjacent to both force mains; good road frontage; 100-ft gas easement limits buildable area; no Phase 1/2 environmental assessment completed; unknown fill bearing capacity. Site 13A (Hartman Drive, ~130 acres, <a href="merged_parcels_13A.png" target="_blank">Maps 58-028.00, 58-015.39, 45-057.00, 45-058.00 (Combined)</a>) was originally listed separately as a three-parcel combination adjacent to this site, with a 60-ft stream buffer between them; consolidated here as the committee decided that these sites are only viable when combined.</td>
       </tr>
-      <tr class="inside shortlisted">
+      <tr>
         <td class="site">14</td>
         <td class="score">39.9</td>
         <td class="city">Yes</td>
+        <td class="seller"></td>
         <td>1310 Quarles Drive</td>
         <td class="acreage">24</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095058G%20A%2000200" target="_blank">Map 58G Group A Parcel 2</a></td>
@@ -238,15 +254,17 @@
         <td class="site">15</td>
         <td class="score">32.2</td>
         <td class="city">Yes</td>
+        <td class="seller"></td>
         <td>1103 Baddour Drive</td>
         <td class="acreage">47</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095058M%20B%2003300" target="_blank">Map 58M Group B Parcel 33</a></td>
         <td class="note">TRW site, city-owned; 46.4% in flood plain &#8212; full buildout doesn&#8217;t fit; would split treatment with existing plant (splitting sites 14+15 also discussed); three-phase/water/gas available; line distance: May 27 says 3,500 ft, June 2 says ~7,000 ft (discrepancy); ~$7M conveyance; significant environmental concerns, ongoing state brownfield remediation.</td>
       </tr>
-      <tr class="inside shortlisted">
+      <tr>
         <td class="site">16</td>
         <td class="score">36.2</td>
         <td class="city">Yes</td>
+        <td class="seller"></td>
         <td>305&#8211;309 Hartmann Drive</td>
         <td class="acreage">73.06</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095058%20%20%20%2002403" target="_blank">Map 58 Parcel 24.03</a></td>
@@ -256,6 +274,7 @@
         <td class="site">17</td>
         <td class="score">30.0</td>
         <td class="city">Yes</td>
+        <td class="seller"></td>
         <td>200 Carver Lane</td>
         <td class="acreage">38.56</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095057%20%20%20%2006302" target="_blank">Map 57 Parcel 63.02</a></td>
@@ -265,6 +284,7 @@
         <td class="site">18</td>
         <td class="score" style="color:#aaa">&mdash;</td>
         <td class="city"></td>
+        <td class="seller"></td>
         <td>Trice Road</td>
         <td class="acreage">82</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095046%20%20%20%2000800" target="_blank">Map 46 Parcel 8.00</a><br><a href="https://tnmap.tn.gov/assessment/#/parcel/095046%20%20%20%2002102" target="_blank">Map 46 Parcel 21.02</a></td>
@@ -274,6 +294,7 @@
         <td class="site">19</td>
         <td class="score">23.9</td>
         <td class="city"></td>
+        <td class="seller"></td>
         <td>Coles Ferry Pike</td>
         <td class="acreage">43</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095035%20%20%20%2000900" target="_blank">Map 35 Parcel 9.00</a></td>
@@ -283,6 +304,7 @@
         <td class="site">20</td>
         <td class="score">25.8</td>
         <td class="city"></td>
+        <td class="seller"></td>
         <td>Barton's Creek</td>
         <td class="acreage"></td>
         <td class="propid"><a href="Site%2020%202026-06-30%20114428.png" target="_blank">Screenshot</a></td>
@@ -292,6 +314,7 @@
         <td class="site">22</td>
         <td class="score" style="color:#aaa">&mdash;</td>
         <td class="city">Yes</td>
+        <td class="seller">Yes</td>
         <td>Maple Hill Road</td>
         <td class="acreage">150</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095046%20%20%20%2002101" target="_blank">Map 46 Parcel 021.01</a></td>
@@ -313,6 +336,12 @@
     Higher scores reflect stronger committee preference. Sites 13A and 18 did not appear
     in the announced ranking; Site 21 appeared in the ranking but is not yet in
     this table. Site 22 was added at the June 29, 2026 meeting; score not yet announced.</span>
+    <span id="seller-note"><sup>&dagger;</sup> <strong>Willing Seller</strong> reflects the mayor's
+    report at the July 21, 2026 committee meeting on owner willingness to discuss a sale.
+    For Site 22, the mayor stated the willingness was expressed by the person holding a
+    purchase contract on the property, not the owner of record. At that meeting the committee
+    eliminated all sites except the four with willing sellers (2, 7, 13, 22), which is
+    reflected in the row coloring.</span>
   </div>
 
   <script>
