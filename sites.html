@@ -84,13 +84,14 @@
   statement acknowledges nineteen sites. Site 22 (Maple Hill Road, parcel 046 021.01) was added at the June 29, 2026 committee meeting.</p>
 
   <p style="font-size:0.85em;color:#555;margin-top:16px;margin-bottom:2px;font-style:italic;">
-    Site qualification coloring current as of Selection Committee results on July 21, 2026.
+    Site qualification coloring current as of Selection Committee results on August 4, 2026.
   </p>
   <p style="font-size:0.85em;color:#444;margin-top:4px;margin-bottom:4px;">
-    <span style="display:inline-block;width:13px;height:13px;background:#f8c4c4;border:1px solid #aaa;vertical-align:middle;margin-right:4px;"></span>Not eliminated, county only &emsp;
+    <span style="display:inline-block;width:13px;height:13px;background:#f8c4c4;border:1px solid #aaa;vertical-align:middle;margin-right:4px;"></span>Not eliminated, not fully within city limits &emsp;
     <span style="display:inline-block;width:13px;height:13px;background:#eaf5ea;border:1px solid #aaa;vertical-align:middle;margin-right:4px;"></span>Not eliminated, within city limits &emsp;
     <span style="display:inline-block;width:13px;height:13px;background:#fefce8;border:1px solid #aaa;vertical-align:middle;margin-right:4px;"></span>Undetermined &emsp;
-    <span style="display:inline-block;width:13px;height:13px;background:#ccc;border:1px solid #aaa;vertical-align:middle;margin-right:4px;"></span>Eliminated
+    <span style="display:inline-block;width:13px;height:13px;background:#ccc;border:1px solid #aaa;vertical-align:middle;margin-right:4px;"></span>Eliminated &emsp;
+    <a href="#" onclick="sortByStatus();return false;" style="color:#0969da;text-decoration:underline;cursor:pointer;" title="Sort with not-eliminated sites first">Sort by status</a>
   </p>
   <p style="font-size:0.85em;color:#444;margin-top:4px;margin-bottom:4px;">
     All sites with color are current candidates for the new wastewater treatment facility.
@@ -120,7 +121,7 @@
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095025%20%20%20%2004100" target="_blank">Map 25 Parcel 41</a></td>
         <td class="note">Acreage listed as 235 in property ID source. 3.2% in flood plain; single home and outbuildings on site; no gas or three-phase power (extension needed); narrow road, improvements likely; cut/fill balances; ~$8M conveyance.</td>
       </tr>
-      <tr class="shortlisted">
+      <tr>
         <td class="site">2</td>
         <td class="score">38.1</td>
         <td class="city"></td>
@@ -128,7 +129,7 @@
         <td>3965 Mann Road</td>
         <td class="acreage">66</td>
         <td class="propid"><a href="https://tnmap.tn.gov/assessment/#/parcel/095025%20%20%20%2003300" target="_blank">Map 25 Parcel 33</a></td>
-        <td class="note">Same utility constraints as site 1 (no gas/three-phase; ~14,000 ft of new three-phase line needed per July 21 update); ~1,000 ft from main line, ~$1M conveyance (revised July 21; earlier estimate was ~$500K); 9.6% in flood plain (NW corner); at least one home and another structure on site; hill cut needed &mdash; engineer described it as the smallest of the final four, requiring the most grading; no geotechnical data yet, sinkhole potential flagged (July 21); Mann Road access likely needs significant county improvements (narrow, curved road).</td>
+        <td class="note"><strong>Eliminated August 4, 2026:</strong> combined committee ranking of 46 (lowest of the final four); removed by floor amendment citing excessive on-site grading to the property lines, no buffer, access challenges, and separation from existing city infrastructure. Public comment also raised ~2,700+ acres of adjacent property that could gain right-to-service rights under HB 2385/SB 2057 if this site were selected, and the absence of nearby three-phase power/gas. Same utility constraints as site 1 (no gas/three-phase; ~14,000 ft of new three-phase line needed per July 21 update); ~1,000 ft from main line, ~$1M conveyance (revised July 21; earlier estimate was ~$500K); 9.6% in flood plain (NW corner); at least one home and another structure on site; hill cut needed &mdash; engineer described it as the smallest of the final four, requiring the most grading; no geotechnical data yet, sinkhole potential flagged (July 21); Mann Road access likely needs significant county improvements (narrow, curved road).</td>
       </tr>
       <tr>
         <td class="site">3</td>
@@ -341,7 +342,10 @@
     For Site 22, the mayor stated the willingness was expressed by the person holding a
     purchase contract on the property, not the owner of record. At that meeting the committee
     eliminated all sites except the four with willing sellers (2, 7, 13, 22), which is
-    reflected in the row coloring.</span>
+    reflected in the row coloring. At the August 4, 2026 meeting, the committee voted
+    unanimously to recommend three of those four sites (22, 13, 7) to the mayor and city
+    council for further study, removing Site 2 by floor amendment (see the sites table
+    and <a href="meeting_notes_August4.html">August 4 meeting notes</a> for details).</span>
   </div>
 
   <script>
@@ -376,7 +380,28 @@
       });
       for (var i = 0; i < rows.length; i++) tbody.appendChild(rows[i]);
     }
-    sortByCol(3, 'asc', 'city');
+
+    function sortByStatus() {
+      var tbody = document.querySelector('table tbody');
+      var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+      function priority(row) {
+        if (row.classList.contains('inside') || row.classList.contains('shortlisted')) return 0;
+        if (row.classList.contains('undetermined')) return 1;
+        return 2;
+      }
+      rows.sort(function(a, b) {
+        var pa = priority(a), pb = priority(b);
+        if (pa !== pb) return pa - pb;
+        var sa = a.cells[0].textContent.trim().match(/^(\d+)([A-Za-z]?)$/) || [0, '999', ''];
+        var sb = b.cells[0].textContent.trim().match(/^(\d+)([A-Za-z]?)$/) || [0, '999', ''];
+        var na = parseInt(sa[1]), nb = parseInt(sb[1]);
+        if (na !== nb) return na - nb;
+        return (sa[2] || '').localeCompare(sb[2] || '');
+      });
+      for (var i = 0; i < rows.length; i++) tbody.appendChild(rows[i]);
+    }
+
+    sortByStatus();
   </script>
 
   <script data-goatcounter="https://lebanon-wwtp.goatcounter.com/count"
